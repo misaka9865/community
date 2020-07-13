@@ -4,5 +4,3 @@
 [Spring文档](https://spring.io/guides)  
 [Github OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)  
 [maven社区](https://mvnrepository.com/)  
-笔记本尝试第一次提交
-台式机提交一次
