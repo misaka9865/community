@@ -2,6 +2,8 @@ package life.majiang.community.controller;
 
 import life.majiang.community.dto.AccessTokenDto;
 import life.majiang.community.dto.GithubUser;
+import life.majiang.community.mapper.UserMapper;
+import life.majiang.community.model.User;
 import life.majiang.community.provider.GithubProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +26,9 @@ public class AuthorizeController {
     @Value("${github.redirect.uri}")
     private String redirectUri;
 
+    @Autowired
+    private UserMapper userMapper;
+
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code") String code,
                            @RequestParam(name = "state") String state,
@@ -37,6 +42,8 @@ public class AuthorizeController {
         String accessToken = githubProvider.getAccessToken(accessTokenDto);
         GithubUser user = githubProvider.githubUser(accessToken);
         if(user != null){
+            User user1 = new User();
+            userMapper.insert(user1);
             //登录成功，写cookie 和 session
             request.getSession().setAttribute("user", user);
             return "redirect:/";
