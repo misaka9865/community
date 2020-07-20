@@ -1,6 +1,7 @@
 package life.majiang.community.dto;
 
 import life.majiang.community.exception.CustomizeErrorCode;
+import life.majiang.community.exception.CustomizeException;
 import lombok.Data;
 
 @Data
@@ -20,7 +21,11 @@ public class ResultDTO {
         return errorOf(errorCode.getCode(), errorCode.getMessage());
     }
 
-    public static ResultDTO okOf(){
+    public static ResultDTO errorOf(CustomizeException e) {
+        return errorOf(e.getCode(), e.getMessage());
+    }
+
+    public static ResultDTO okOf() {
         ResultDTO resultDTO = new ResultDTO();
         resultDTO.setCode(200);
         resultDTO.setMessage("请求成功");
