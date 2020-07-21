@@ -1,3 +1,6 @@
+/**
+ * 提交回复
+ */
 function post() {
     var questionId = $("#question_id").val();
     var content = $("#comment_content").val();
@@ -33,4 +36,12 @@ function post() {
         },
         dataType: "json"
     });
+}
+
+/**
+ * 展开二级评论
+ */
+function collapseComments(e) {
+
+
 }
