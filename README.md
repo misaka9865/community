@@ -92,6 +92,8 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 [One Tab](https://chrome.google.com/webstore/detail/chphlpgkkbolifaimnlloiipkdnihall)    
 [Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related)  
 [Postman](https://chrome.google.com/webstore/detail/coohjcphdfgbiolnekdpbcijmhambjff)
+[在idea里如何实现Git项目回滚](https://blog.csdn.net/weixin_40836179/article/details/87006285)
+
 
 ## 更新日志
 - 2019-7-30 修复 session 过期时间很短问题   
