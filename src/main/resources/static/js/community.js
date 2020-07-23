@@ -80,7 +80,6 @@ function collapseComments(e) {
             $.getJSON("/comment/" + id, function (data) {
                 $.each(data.data.reverse(), function (index, comment) {
 
-
                     var mediaLeftElement = $("<div/>", {
                         "class": "media-left"
                     }).append($("<img/>", {
@@ -93,12 +92,14 @@ function collapseComments(e) {
                     }).append($("<h5/>", {
                         "class": "media-heading",
                         "html": comment.user.name
-                    })).append($("<h5/>", {
-                        "class": "media-heading",
-                        "html": comment.user.name
-                    })
-
-                    );
+                    })).append($("<div/>", {
+                        "html": comment.content
+                    })).append($("<div/>", {
+                        "class": "menu"
+                    }).append($("<div/>", {
+                        "class": "pull-right",
+                        "html": moment(comment.gmtCreate).format('YYYY-MM-DD')
+                    })));
 
                     var mediaElement = $("<div/>", {
                         "class": "media"
