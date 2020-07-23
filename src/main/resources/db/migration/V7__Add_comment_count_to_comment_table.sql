@@ -1,1 +1,1 @@
-alter table comment add comment_count int default 0;mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+alter table comment add comment_count int default 0;
