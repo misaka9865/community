@@ -36,30 +36,32 @@
                     <label for="tag">添加标签：</label>
                     <input type="text" class="form-control" th:value="${tag}" id="tag" name="tag"
                            autocomplete="off" placeholder="输入标签，以“，”隔开"
-                            onclick="showSelectTag()">
-                    <div id="select-tag" class="tag-tab">
-                            <!--标签导航页-->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">开发语言</a></li>
-                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">平台框架</a></li>
-                            </ul>
+                           onclick="showSelectTag()">
+                    <div id="select-tag" class="publish-tag-tab">
 
-                            <!--具体标签-->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="home">
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('Spring')">Spring</span></span>
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('Java')">Java</span></span>
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('PHP')">PHP</span></span>
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('Spring Boot')">Spring Boot</span></span>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="profile">
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('Spring')">Spring</span></span>
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('Java')">Java</span></span>
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('PHP')">PHP</span></span>
-                                    <span class="label label-info"><span class="glyphicon glyphicon-tags" onclick="selectTag('Spring Boot')">Spring Boot</span></span>
-                                </div>
+                        <!--标签导航页-->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" th:each="selectCategory : ${tags}">
+                                <a th:href="${'#'+selectCategory.categoryName}" aria-controls="home" role="tab"
+                                   data-toggle="tab" th:text="${selectCategory.categoryName}"></a>
+                            </li>
+                        </ul>
+
+                        <!--具体标签-->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane" th:id="${selectCategory.categoryName}"
+                                 th:each="selectCategory : ${tags}">
+                                <span>
+                                    <span class="label label-info" th:each="selectTag : ${selectCategory.tags}">
+                                        <span class="glyphicon glyphicon-tags" onclick="selectTag(this)"
+                                          th:data-tag="${selectTag}"
+                                          th:text="${selectTag}">
+
+                                        </span>
+                                    </span>
+                                </span>
                             </div>
-
+                        </div>
                     </div>
                 </div>
 
