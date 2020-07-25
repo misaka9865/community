@@ -176,3 +176,44 @@
 2020-07-25 22:40:16.000  INFO 6796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2020-07-25 22:40:16.031  INFO 6796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-07-25 22:40:16.047  INFO 6796 --- [restartedMain] l.m.community.CommunityApplication       : Started CommunityApplication in 2.936 seconds (JVM running for 4.017)
+2020-07-25 22:50:44.105  INFO 11072 --- [restartedMain] l.m.community.CommunityApplication       : Starting CommunityApplication on DESKTOP-QKBU13T with PID 11072 (D:\IdeaProjects\community\target\classes started by hanxu in D:\IdeaProjects\community)
+2020-07-25 22:50:44.105  INFO 11072 --- [restartedMain] l.m.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2020-07-25 22:50:44.183  INFO 11072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-25 22:50:44.183  INFO 11072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-25 22:50:45.462  INFO 11072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-25 22:50:45.464  INFO 11072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-25 22:50:45.464  INFO 11072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-25 22:50:45.557  INFO 11072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-25 22:50:45.557  INFO 11072 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1374 ms
+2020-07-25 22:50:45.604  INFO 11072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-25 22:50:45.760  INFO 11072 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-25 22:50:45.760  INFO 11072 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2020-07-25 22:50:46.338  INFO 11072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-25 22:50:46.401  INFO 11072 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-25 22:50:46.677  INFO 11072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-25 22:50:46.708  INFO 11072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-25 22:50:46.724  INFO 11072 --- [restartedMain] l.m.community.CommunityApplication       : Started CommunityApplication in 3.148 seconds (JVM running for 4.551)
+2020-07-25 22:50:51.419  INFO 11072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-25 22:50:51.420  INFO 11072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-25 22:50:51.426  INFO 11072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-07-25 22:50:51.499 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION
+2020-07-25 22:50:51.519 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-07-25 22:50:51.533 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-07-25 22:50:51.535 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,?
+2020-07-25 22:50:51.538 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-07-25 22:50:51.547 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-07-25 22:50:51.548 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ?
+2020-07-25 22:50:51.551 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-07-25 22:50:51.552 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-25 22:50:51.558 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ?
+2020-07-25 22:50:51.558 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-07-25 22:50:51.559 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-25 22:50:51.560 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ?
+2020-07-25 22:50:51.560 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-07-25 22:50:51.561 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-25 22:50:51.561 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ?
+2020-07-25 22:50:51.561 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-07-25 22:50:51.565 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-25 22:50:51.566 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ?
+2020-07-25 22:50:51.566 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Long)
+2020-07-25 22:50:51.566 DEBUG 11072 --- [http-nio-8080-exec-1] l.m.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
