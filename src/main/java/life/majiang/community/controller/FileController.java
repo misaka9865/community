@@ -13,7 +13,7 @@ public class FileController {
     public FileDTO upload() {
         FileDTO fileDTO = new FileDTO();
         fileDTO.setSuccess(1);
-        fileDTO.setUrl("/images/play.png");
+        fileDTO.setUrl("/images/poor.png");
         return fileDTO;
     }
 }
