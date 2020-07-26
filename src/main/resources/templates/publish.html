@@ -69,16 +69,15 @@
                         <!--具体标签-->
                         <div class="tab-content">
                             <div role="tabpanel" th:id="${selectCategory.categoryName}"
-                                 th:each="selectCategory : ${tags}"
-                                 th:class="${selectCategoryStat.first ? 'active tab-pane' : 'tab-pane'}">
+                                 th:each="selectCategory: ${tags}"
+                                 th:class="${selectCategoryStat.first ? 'active tab-pane':'tab-pane'}">
                                 <span>
-                                    <span class="label label-info" th:each="selectTag : ${selectCategory.tags}">
-                                        <span class="glyphicon glyphicon-tags" onclick="selectTag(this)"
-                                              th:data-tag="${selectTag}"
-                                              th:text="${' '+selectTag}">
-
-                                        </span>
+                                    <span th:each="selectTag: ${selectCategory.tags}">
+                                    <span class="community-tag" onclick="selectTag(this)"
+                                          th:data-tag="${selectTag}"
+                                          th:text="${' '+selectTag}">
                                     </span>
+                                </span>
                                 </span>
                             </div>
                         </div>
@@ -106,7 +105,7 @@
             <h3>发帖指南</h3>
             •帖子主题：精简描述帖子主题；<br>
             •帖子内容：详细补充，确保描述清晰、直观、准确；<br>
-            •添加标签：选择一个或者多个合适的标签，用“，”隔开。<br>
+            •选择标签：选择一个或者多个合适的标签，用“，”隔开。<br>
         </div>
     </div>
 </div>
