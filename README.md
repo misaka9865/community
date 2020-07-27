@@ -14,16 +14,7 @@
 |UFile|https://github.com/ucloud/ufile-sdk-java|
 |Bootstrap|https://v3.bootcss.com/getting-started/|
 
-## 在线视频
-|  标题   |  链接   |
-| --- | --- |
-|  【Spring Boot 实战】论坛项目【第一季】   |  https://www.bilibili.com/video/BV1r4411r7au  |
-|  【Spring Boot 实战】热门话题【第二季】 |  https://www.bilibili.com/video/BV1Z4411f7RK  |
-|  【Spring Boot 实战】接入广告流量变现【第三季】  | https://www.bilibili.com/video/BV1L4411y7J9  |
-|  【Spring Boot 实战】Vue 零基础入门【第四季】  |   https://www.bilibili.com/video/BV1gE411R7YA |
-|  【Spring Boot 实战】快速搭建免费 HTTPS 服务  |   https://www.bilibili.com/video/BV1oJ411K7VT  |
-
-## 本地运行手册
+## 运行
 1. 安装必备工具  
 JDK，Maven
 2. 克隆代码到本地
@@ -42,9 +33,24 @@ java -jar target/community-0.0.1-SNAPSHOT.jar
 ```
 http://localhost:8080
 ```
+6.云服务器命令
 
+```
+ps -aux | grep java  
+```
 
-## 资源文件
+```
+nohub java -jar target/community-0.0.1-SNAPSHOT.jar &  
+```
+
+```
+rm -rf App
+```
+
+```
+mvn clean compile package
+```
+
 
 ```
 运行 migrate 和 generator 的命令
@@ -53,7 +59,7 @@ mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
 
-## 扩展资料
+## 资料
 [Spring 文档](https://spring.io/guides)    
 [Spring Web](https://spring.io/guides/gs/serving-web-content/)   
 [es](https://elasticsearch.cn/explore)    
