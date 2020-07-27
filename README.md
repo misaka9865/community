@@ -1,4 +1,4 @@
-## 毕业设计——社区项目
+## 社区项目
 
 ## 技术栈
 |  技术   |  链接   |
@@ -48,7 +48,7 @@ http://localhost:8080
 
 ```
 运行 migrate 和 generator 的命令
-```bash
+```
 mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
@@ -66,8 +66,7 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 [Spring Dev Tool](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#using-boot-devtools)  
 [Spring MVC](https://docs.spring.io/spring/docs/5.0.3.RELEASE/spring-framework-reference/web.html#mvc-handlermapping-interceptor)  
 [Markdown 插件](http://editor.md.ipandao.com/)   
-[UFfile SDK](https://github.com/ucloud/ufile-sdk-java)  
-[Count(*) VS Count(1)](https://mp.weixin.qq.com/s/Rwpke4BHu7Fz7KOpE2d3Lw)  
+[UFfile SDK](https://github.com/ucloud/ufile-sdk-java)   
 [Git](https://git-scm.com/download)   
 [Visual Paradigm](https://www.visual-paradigm.com)    
 [Flyway](https://flywaydb.org/getstarted/firststeps/maven)  
