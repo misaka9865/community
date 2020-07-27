@@ -12,7 +12,6 @@
 |Bootstrap|https://v3.bootcss.com/getting-started/|
 |Github OAuth|https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/|
 |UFile|https://github.com/ucloud/ufile-sdk-java|
-|Bootstrap|https://v3.bootcss.com/getting-started/|
 
 ## 运行
 1. 安装必备工具  
